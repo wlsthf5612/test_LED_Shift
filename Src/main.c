@@ -150,7 +150,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int sw = 1;
+  int sw = 111;
 
   while (1)
   {
@@ -158,13 +158,13 @@ int main(void)
 	  index = (index + 1) % 8;
 
 	  if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_0) == 0)
-		  sw = 2;
+		  sw = 222;
 	  else if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_1) == 0)
-		  sw = 1;
+		  sw = 111;
 
-	  if(sw == 1)
+	  if(sw == 111)
 		  ByteDataWrite_R(pattern);
-	  if(sw == 2)
+	  if(sw == 222)
 		  ByteDataWrite_L(pattern);
 
 	  HAL_Delay(300);
